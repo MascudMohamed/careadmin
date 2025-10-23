@@ -1,0 +1,57 @@
+/* Custom Styles & Tailwind Configuration */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+.animate-slide-up {
+  animation: slideUp 0.3s ease-in forwards;
+}
+
+:root {
+  --primary-color: #20b2aa; /* Light Sea Green / Teal from logo */
+}
+html {
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+.hero-bg {
+  background: linear-gradient(135deg, #e0f2f1 0%, #ffffff 100%);
+}
+.text-primary {
+  color: var(--primary-color);
+}
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.hover\:bg-primary-dark:hover {
+  background-color: #1a9e96;
+}
+.shadow-lg-primary {
+  box-shadow: 0 10px 15px -3px rgba(32, 178, 170, 0.2),
+    0 4px 6px -2px rgba(32, 178, 170, 0.1);
+}
+
+/* Smooth scrolling for anchor links */
+nav a {
+  transition: color 0.2s;
+}
